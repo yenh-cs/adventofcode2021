@@ -1,7 +1,7 @@
 import math
 
-def gauss_sum(start, end):
-    diff = abs(start-end)
+def gauss_sum(num1, num2):
+    diff = abs(num1 - num2)
     return diff*(diff+1)/2
 
 def main():
