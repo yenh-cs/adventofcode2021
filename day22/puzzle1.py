@@ -221,7 +221,7 @@ def count_cubes(cuboids, should_print):
 
 def main():
     cuboids = []
-    commands = read_data('input2.txt')
+    commands = read_data('input.txt')
     for command in commands:
         cuboids = merge_cuboids(cuboids, command)
 

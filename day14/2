@@ -1,0 +1,18 @@
+import numpy as np
+
+def read_data(file_name):
+    with open(file_name) as file:
+       data = file.readlines() 
+       data = [line.rstrip('\n') for line in data if line != '\n']
+       polymer_template, rules = data[0], data[1: -1]
+       rules = [(rule.split(' -> ')[0], rule.split(' -> ')[1]) for rule in rules]
+
+       return polymer_template, rules
+
+
+
+def main():
+    polymer_template, rules = read_data('input.txt')
+
+if __name__ == '__main__':
+    main()
