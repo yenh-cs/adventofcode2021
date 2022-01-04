@@ -1,5 +1,3 @@
-import collections
-
 def read_data(file_name):
     with open(file_name) as file:
        data = file.readlines() 
@@ -63,13 +61,12 @@ def insert_and_count(polymer_template, rules, steps=1):
     return single_occurrences    
 
 
-
-
 def main():
     polymer_template, rules = read_data('input.txt')
     single_occurrences = insert_and_count(polymer_template, rules, 40)
     diff = max(single_occurrences.values()) - min(single_occurrences.values())
     print(diff)
+
 
 if __name__ == '__main__':
     main()
